@@ -2,7 +2,9 @@ steps:
 - name: gcr.io/cloud-builders/gcloud
   args:
   - beta
-  - hani-func
   - functions
   - deploy
   - --trigger-http
+  - --source=.
+  - --entry-point=f
+  - hani-func # Function name
